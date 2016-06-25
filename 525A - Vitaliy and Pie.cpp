@@ -7,11 +7,11 @@ int main() {
   while (cin >> k >> d) {
     ++v[k - 'a'];
     d -= 'A';
-    if (! v[d]) {
-      ++v[d];
+    if (v[d]) {
+      --v[d];
+    } else {
       ++a;
     }
-    --v[d];
   }
   cout << a;
 }
